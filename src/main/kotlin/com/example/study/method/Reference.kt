@@ -1,13 +1,14 @@
 package com.example.study.method
 
-fun main() = runBlocking {
-    doWorld()
+fun evenNumber(number: Int): Boolean {
+    return number % 2 == 0
 }
 
-suspend fun doWorld() = coroutineScope {  // this: CoroutineScope
-    launch {
-        delay(1000L)
-        println("World!")
-    }
-    println("Hello")
+
+fun main() {
+    val listNumber = listOf(0, 5, 4, 2, 7)
+
+    val result = listNumber.filter(::evenNumber)
+    // 偶数である値を出力する
+    println(result)
 }
