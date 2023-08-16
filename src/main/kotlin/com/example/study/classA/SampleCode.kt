@@ -8,4 +8,7 @@ fun main() {
     val age = 11
     println(message)
     println(age)
+
+//  このような書き方もできる
+    println(message);println(age)
 }
